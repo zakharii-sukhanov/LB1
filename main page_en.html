@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="style.css" type="text/css">
+	<title>Musical Genres</title>
+</head>
+<body>
+	<header><h1><a href="main page_en.html">Website – Guide to Musical Genres</a></h1></header>
+	<nav>
+		<ul>
+			<li><a href="rock.html">Rock</a></li>
+			<li><a href="jazz.html">Jazz</a></li>
+			<li><a href="rap.html">Rap</a></li>
+			<li><a href="classical.html">Classical</a></li>
+			<li><a href="electronic.html">Electronic</a></li>
+			<li><a href="css.html">Using Styles</a></li>
+			<li><a href="JS.html">Using JS</a></li>
+		</ul>
+	</nav>
+	<section>
+		<select id="languageSelector" onchange="changeLanguage()">
+    		<option value="en" selected>English</option>
+    		<option value="ua">Українська</option>
+  		</select>
+		<script type="text/javascript">
+			function changeLanguage() {
+  				var languageSelector = document.getElementById("languageSelector");
+  				var selectedLanguage = languageSelector.value;
+
+  				// Redirect to the selected language version of the page
+  				window.location.href = "main page_" + selectedLanguage + ".html";
+			}
+		</script>
+		<p>From rock to electronic, from jazz to classical – the world of music is diverse and exciting. Our website is designed for those who want to learn more about various music styles and genres.</p>
+    	<p>You will find interesting information about the origin of each genre, the features of the instruments used, and the outstanding performers who make each genre special.</p>
+    	<p>Below are the genres and examples of compositions to explore each genre:</p>
+    		<table border="3">
+				<tr>
+					<td>Musical Genre</td>
+					<td>Example Compositions</td>
+				</tr>
+				<tr>
+					<td>Rock</td>
+					<td>Queen - "Bohemian Rhapsody"
+					The Rolling Stones - "Paint It Black"
+					Led Zeppelin - "Stairway to Heaven"
+					The Beatles - "Come Together"</td>
+				</tr>
+				<tr>
+					<td>Jazz</td>
+					<td>Miles Davis - "So What"
+John Coltrane - "My Favorite Things"
+Duke Ellington - "Take the 'A' Train"</td>
+				</tr>
+				<tr>
+					<td>Rap</td>
+					<td>Eminem - "Lose Yourself"
+Notorious B.I.G. - "Juicy"
+2Pac - "California Love"
+Kendrick Lamar - "HUMBLE."</td>
+				</tr>
+				<tr>
+					<td>Classical Music</td>
+					<td>Ludwig van Beethoven - "Symphony No. 9 in D minor, Op. 125" (Choral Symphony)
+Wolfgang Amadeus Mozart - "Eine kleine Nachtmusik, K. 525"
+Johann Sebastian Bach - "Toccata and Fugue in D minor, BWV 565"
+Pyotr Ilyich Tchaikovsky - "Swan Lake, Op. 20"</td>
+				</tr>
+				<tr>
+					<td>Electronic Music</td>
+					<td>Daft Punk - "Around the World"
+The Chemical Brothers - "Block Rockin' Beats"
+Kraftwerk - "Autobahn"
+Deadmau5 - "Strobe"</td>
+			</table>
+    	<p>Explore our sections and learn more about the world of music.</p>
+	</section>
+	<footer>Completed by student of group КБІКС 21-5, Zakhar Sukhanov</footer>
+</body>
+</html>

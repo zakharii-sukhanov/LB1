@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="style.css" type="text/css">
+	<script src="random_info.js" defer></script>
+	<title>Музичні напрямки</title>
+
+</head>
+<body>
+	<header><h1><a href="main page_ua.html">Сайт – довідник про музичні напрямки</a></h1></header>
+	<nav>
+		<ul>
+			<li><a href="rock.html" onmouseover="changeColor(this)">Рок</a></li>
+			<li><a href="jazz.html"onmouseover="changeColor(this)">Джаз</a></li>
+			<li><a href="rap.html" onmouseover="changeColor(this)">Реп</a></li>
+			<li><a href="classical.html" onmouseover="changeColor(this)">Класика</a></li>
+			<li><a href="electronic.html" onmouseover="changeColor(this)">Електронна</a></li>
+			<li><a href="css.html" onmouseover="changeColor(this)">Використання стилів</a></li>
+			<li><a href="JS.html" onmouseover="changeColor(this)">Використання JS</a></li>
+		</ul>
+	</nav>
+	<section>
+        <!-- Завдання №1 -->
+		<br>
+				<button onclick="showBrowserInfo()">Вивести інформацію про браузер</button>
+
+				<script>
+				    function showBrowserInfo() {
+				        // Отримання інформації про браузер
+				        var browserType = navigator.userAgent;
+				        var browserVersion = navigator.appVersion;
+
+				        // Виведення результатів у вікно браузера
+				        alert("Browser Type: " + browserType + "\nBrowser Version: " + browserVersion);
+				    }
+				</script>
+                <!-- Завдання №2 -->
+		<button onclick="performMathOperations()">Виконати математичні операції</button>
+
+<script>
+    function performMathOperations() {
+        // Введення чисел
+        var num1 = parseFloat(prompt("Введіть перше число:"));
+        var num2 = parseFloat(prompt("Введіть друге число:"));
+
+        // Обчислення операцій
+        var sum = num1 + num2;
+        var difference = num1 - num2;
+
+        // Виведення різниці й суми за допомогою методу write
+        document.write("Сума чисел: " + sum + "<br>");
+        document.write("Різниця чисел: " + difference);
+
+        // Обчислення ділення й множення
+        var division = num1 / num2;
+        var multiplication = num1 * num2;
+
+        // Виведення ділення й множення за допомогою методу alert
+        window.alert("Ділення чисел: " + division);
+        window.alert("Множення чисел: " + multiplication);
+    }
+</script>
+<!-- Завдання №3 -->
+
+<br>
+<br>
+<br>
+<br>
+<img id="zoomedImage" src="image/rap.jpg" alt="Zoomable Image" height="270" width="480" 
+     onmouseover="zoomIn()" onmouseout="zoomOut()">
+
+<script>
+    function zoomIn() {
+        document.getElementById("zoomedImage").style.transform = "scale(1.2)";
+    }
+
+    function zoomOut() {
+        document.getElementById("zoomedImage").style.transform = "scale(1)";
+    }
+
+</script>
+
+
+<!-- Завдання №4 -->
+<form>
+    <input type="radio" name="imageSelector" value="rock" onchange="changeImage(this.value)"> 1
+    <input type="radio" name="imageSelector" value="jazz" onchange="changeImage(this.value)"> 2
+    <input type="radio" name="imageSelector" value="rap" onchange="changeImage(this.value)"> 3
+    <input type="radio" name="imageSelector" value="classical" onchange="changeImage(this.value)"> 4
+    <input type="radio" name="imageSelector" value="electronic" onchange="changeImage(this.value)"> 5
+</form>
+<style>
+       body {
+           
+            justify-content: center;
+        }
+
+        form {
+            text-align: center;
+        }
+img {
+            display: block;
+           margin: 100px auto;
+        }
+   
+</style>
+<img id="selectedImage" src="" alt="Виберiть картинку">
+
+<script>
+    function changeImage(selectedValue) {
+        var image = document.getElementById("selectedImage");
+
+        
+        image.src = "image/" + selectedValue + ".jpg"; 
+        image.width = 480; 
+        image.height = 270;
+
+        document.querySelector('form').addEventListener('reset', function() {
+            image.src = "";
+            image.width = 0; // 
+            image.height = 0;
+        });
+    }
+</script>
+<!-- Завдання №5 -->
+ <script>
+        function changeColor(element) {
+            
+                element.style.color = '#ffffff'; // Змінюємо колір гіперпосилання при наведенні
+
+        }
+
+    </script>
+<!-- Завдання №6 -->
+     <form>
+    <label for="pageSelect">Select a Page:</label>
+    <select id="pageSelect" onchange="navigateToPage()">
+      <option value="">Select an option...</option>
+      <option value="main page.html">Головна сторінка</option>
+      <option value="rock.html">Рок</option>
+      <option value="jazz.html">Джаз</option>
+      <option value="rap.html">Реп</option>
+      <option value="classical.html">Класична музика</option>
+      <option value="electronic.html">Електронна музика</option>
+      <option value="css.html">CSS</option>
+      <option value="js.html">JS</option>
+    </select>
+  </form>
+
+  <script>
+    function navigateToPage() {
+      var selectElement = document.getElementById("pageSelect");
+      var selectedValue = selectElement.value;
+
+      if (selectedValue) {
+        // Redirect to the selected page
+        window.location.href = selectedValue;
+      }
+    } 
+  </script>
+
+
+  <!-- Завдання №7 виконано на сторінці "main_page" -->
+ <!-- Завдання №8 -->
+<button onclick="displayRandomInfo()">Показати випадкову інформацію</button>
+  <p id="infoOutput"></p>
+
+  <script>
+    function displayRandomInfo() {
+      var infoOutput = document.getElementById("infoOutput");
+      infoOutput.textContent = getRandomInfo();
+    }
+  </script>
+  <br>
+  <br>
+  <br>
+	</section>
+	<footer>Виконав роботу студент групи КБІКС 21-5 Суханов Захарій</footer>
+</body>
+</html>
+

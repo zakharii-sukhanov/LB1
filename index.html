@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="style.css" type="text/css">
+	<title>Музичні напрямки</title>
+</head>
+<body>
+	<header><h1><a href="index.html">Сайт – довідник про музичні напрямки</a></h1></header>
+	<nav>
+		<ul>
+			<li><a href="rock.html">Рок</a></li>
+			<li><a href="jazz.html">Джаз</a></li>
+			<li><a href="rap.html">Реп</a></li>
+			<li><a href="classical.html">Класика</a></li>
+			<li><a href="electronic.html">Електронна</a></li>
+			<li><a href="css.html">Використання стилів</a></li>
+			<li><a href="JS.html">Використання JS</a></li>
+		</ul>
+	</nav>
+	<section>
+		<select id="languageSelector" onchange="changeLanguage()">
+    <option value="en">English</option>
+    <option value="ua" selected>Українська</option>
+  	</select>
+		<script type="text/javascript">
+			function changeLanguage() {
+  var languageSelector = document.getElementById("languageSelector");
+  var selectedLanguage = languageSelector.value;
+
+  // Redirect to the selected language version of the page
+  window.location.href = "main page_" + selectedLanguage + ".html";
+}
+		</script>
+		<p>Від року до електроніки, від джазу до класики – світ музики різноманітний та захоплюючий. Наш сайт призначений для тих, хто хоче дізнатися більше про різні музичні стилі та напрями.</p>
+    	<p>Ви зможете знайти цікаву інформацію про походження кожного напрямку, особливості інструментів, що використовуються, та видатних виконавців, які роблять цей жанр особливим.</p>
+    	<p>Нижче будуть наведені напрямки та приклади композицій для ознайомлення з жанром</p>
+    		<table border="3">
+				<tr>
+					<td>Музичний напрям</td>
+					<td>Приклади композицій</td>
+				</tr>
+				<tr>
+					<td>Rock</td>
+					<td>Queen - "Bohemian Rhapsody"
+					The Rolling Stones - "Paint It Black"
+					Led Zeppelin - "Stairway to Heaven"
+					The Beatles - "Come Together"</td>
+				</tr>
+				<tr>
+					<td>Джаз</td>
+					<td>Miles Davis - "So What"
+John Coltrane - "My Favorite Things"
+Duke Ellington - "Take the 'A' Train"</td>
+					
+				<tr>
+					<td>Реп</td>
+					<td>Eminem - "Lose Yourself"
+Notorious B.I.G. - "Juicy"
+2Pac - "California Love"
+Kendrick Lamar - "HUMBLE."</td>
+					
+				</tr>
+				<tr>
+					<td>Класична музика</td>
+					<td>Ludwig van Beethoven - "Symphony No. 9 in D minor, Op. 125" (Choral Symphony)
+Wolfgang Amadeus Mozart - "Eine kleine Nachtmusik, K. 525"
+Johann Sebastian Bach - "Toccata and Fugue in D minor, BWV 565"
+Pyotr Ilyich Tchaikovsky - "Swan Lake, Op. 20"</td>
+					
+				</tr>
+				<tr>
+					<td>Електронна музика</td>
+					<td>Daft Punk - "Around the World"
+The Chemical Brothers - "Block Rockin' Beats"
+Kraftwerk - "Autobahn"
+Deadmau5 - "Strobe"</td>		 
+
+			</table>
+    	<p>Перегляньте наші розділи та дізнайтеся більше про світ музики</p>
+	</section>
+	<footer>Виконав роботу студент групи КБІКС 21-5 Суханов Захарій</footer>
+</body>
+</html>
+

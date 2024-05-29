@@ -1,0 +1,87 @@
+    body {
+        background-color: #eaeaea;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        color: #333;
+        margin: 0;
+    }
+
+    header {
+        background-color: #3498db;
+        color: white;
+        padding: 20px;
+    }
+    h1
+    {
+        text-align: center;
+        font-family: Impact, fantasy;
+    }
+    h2
+    {
+        text-align: center;
+        font-family: Comic Sans MS, Comic Sans, cursive;
+    }
+    nav {
+        background-color: #5dade2;
+        padding: 10px;
+    }
+
+ul
+{
+margin:0;
+padding:0;
+width: 100%;
+}
+li{
+    display: inline;
+    list-style: none;
+    padding: 50px;
+    margin-right: 35px;
+}
+/*
+    nav a:hover {
+        color: white;
+        margin-right: 15px;
+    }
+*/
+    section {
+        padding: 20px;
+        background-color: #B0E0E6;
+
+    }
+
+  table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-bottom: 20px;
+    }
+
+    th, td {
+        border: 1px solid #bdc3c7;
+        padding: 8px;
+        text-align: left;
+    }
+
+    th {
+        background-color: #3498db;
+        color: white;
+    }
+    footer {
+        background-color: #3498db;
+        color: white;
+        text-align: center;
+        padding: 10px;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+    }
+    /*.zoom-image {
+        transition: transform 0.3s;
+        align-self: center;
+        }
+
+    .zoom-image:hover {
+            transform: scale(1.05); /* збільшуємо картинку в 1.2 рази при наведенні курсору */
+        }
+
+    
+
